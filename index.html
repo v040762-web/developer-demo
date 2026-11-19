@@ -92,6 +92,13 @@
   .title__mark { font-family: var(--v-font-display); font-weight: 700; font-size: var(--v-t-base); letter-spacing: -.01em; text-decoration: none; display: inline-flex; align-items: center; gap: .5em; }
   .title__mark i { width: .7em; height: .7em; border: .18em solid var(--v-accent); display: inline-block; }
   .title__body { position: relative; z-index: 6; padding-block: clamp(1rem, 3vh, 2.5rem); max-width: 60rem; }
+  /* плашка «демо для заказчика»: для показа на Kwork, в Тильду не переносится.
+     Снимается по «убери плашку демо» и при упаковке. Без анимации, видна без скролла. */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; margin: 0 0 var(--v-4);
+    font-size: var(--v-t-xs); letter-spacing: .04em; font-weight: 500; color: var(--v-ink);
+    background: color-mix(in oklab, var(--v-surface) 85%, transparent); border: 1px solid var(--v-hair-strong);
+    border-radius: 999px; padding: .42em .95em; }
+  .demo-for__ava { width: 1.55em; height: 1.55em; border-radius: 50%; object-fit: cover; }
   .title__body .v-label { display: block; margin-bottom: var(--v-5); }
   .title__body h1 { font-size: clamp(2.4rem, 1rem + 4.6vw, 5.4rem); line-height: .96; max-width: 16ch; }
   .title__body .v-lede { margin-top: var(--v-5); max-width: 40ch; color: var(--v-ink); }
@@ -401,6 +408,8 @@
             <span class="v-label">Девелопмент · недвижимость · право</span>
           </div>
           <div class="title__body" data-v-cue="0 1 0 0">
+            <!-- плашка демо для заказчика с Kwork: снимается по «убери плашку демо», в Тильду не переносится -->
+            <p class="demo-for">Демо для alexh96 · по заказу «Одностраничный сайт, лендинг»</p>
             <span class="v-label">Личный сайт · {{город}}</span>
             <h1 class="v-display">Посёлки, недвижимость и право в {{город}} – один ответственный</h1>
             <p class="v-lede">Один ответственный вместо трёх подрядчиков. <b>Объекты и документы – на этой странице.</b></p>
